@@ -1,0 +1,4 @@
+[build]
+  publish = "publicar-zolmyra"
+
+# Static HTML/CSS/JavaScript: no build command or package installation needed.
