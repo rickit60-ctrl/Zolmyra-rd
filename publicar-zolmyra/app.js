@@ -111,7 +111,7 @@ if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
     }), { threshold: .08 });
-    $$('.section-heading, .service-card, .about-copy, .stats, .tech-heading, .steps article, .contact-inner').forEach(element => {
+    $$('.section-heading, .service-card, .about-copy, .stats, .purpose-card, .values-grid article, .tech-heading, .steps article, .contact-inner').forEach(element => {
       // Already visible content stays visible; only reveal content below the fold.
       if (element.getBoundingClientRect().top >= innerHeight) { element.classList.add('reveal-ready'); revealObserver.observe(element); }
     });

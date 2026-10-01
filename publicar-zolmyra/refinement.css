@@ -53,6 +53,15 @@ h1,h2{text-wrap:balance}p{text-wrap:pretty}.hero h1{font-weight:500;letter-spaci
 /* Georgia display wordmark. */
 .hero .hero-wordmark{font-family:Georgia,'Times New Roman',serif;font-size:clamp(58px,6.1vw,94px);font-weight:400;letter-spacing:-3px;width:auto;max-width:100%;line-height:1.1;margin:12px 0 18px}@media(max-width:850px){.hero .hero-wordmark{font-size:64px}}@media(max-width:600px){.hero .hero-wordmark{font-size:clamp(39px,11.7vw,68px);letter-spacing:-1.8px;margin:15px 0 18px}}
 
+/* Violet, electric blue and cyan signature inspired by the company logo. */
+.brand .brand-word,.hero .hero-wordmark{color:#4933d8}
+@supports ((background-clip:text) or (-webkit-background-clip:text)){
+  .brand .brand-word,.hero .hero-wordmark{background-image:linear-gradient(110deg,#9a28ee 0%,#4733e9 34%,#0065ed 66%,#009db8 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+  .hero .hero-wordmark{width:fit-content}
+  .brand .brand-word{background-origin:content-box}
+}
+@media(forced-colors:active){.brand .brand-word,.hero .hero-wordmark{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}.brand-emblem path{fill:CanvasText}}
+
 /* One shared, fluid content grid keeps wide screens balanced. */
 @media(min-width:851px){
   .container,.nav-wrap{width:90%;max-width:1800px;margin-inline:auto}
@@ -84,3 +93,25 @@ h1,h2{text-wrap:balance}p{text-wrap:pretty}.hero h1{font-weight:500;letter-spaci
 }
 
 .contact-email{display:inline-block;margin-top:18px;color:#d3ddd4;font-size:14px;text-decoration:underline;text-underline-offset:5px}.contact-email:hover{color:#fff}#form-status a{text-decoration:underline}@media(max-width:850px){.footer-contact{display:flex}}
+
+.identity{padding:70px 0 65px;border-bottom:1px solid var(--line)}
+.identity .section-heading{margin-bottom:32px}
+.purpose-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.purpose-card{position:relative;overflow:hidden;padding:36px;border:1px solid #d8ded1;border-radius:15px;background:#fffdf8}
+.purpose-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:27px;gap:15px}
+.purpose-top .eyebrow{margin:0;font-size:10px;letter-spacing:2px}
+.purpose-top svg{width:32px;height:32px;stroke-width:1.2;flex-shrink:0}
+.purpose-card h3{font-family:Georgia,"Times New Roman",serif;font-size:clamp(29px,2.5vw,40px);font-weight:400;letter-spacing:-1px;line-height:1.15;margin-bottom:20px}
+.purpose-card>p{font-size:15px;color:var(--muted);line-height:1.75;max-width:630px}
+.purpose-foot{display:block;border-top:1px solid #d8ded1;padding-top:18px;margin-top:28px;font-size:11px;letter-spacing:.7px;color:#52705b}
+.vision-card{background:#073c36;color:#faf8f1;border-color:#073c36}
+.vision-card .eyebrow,.vision-card .purpose-top svg{color:#d7c798}
+.vision-card>p{color:#d9e4da}.vision-card .purpose-foot{color:#d7c798;border-color:#ffffff26}
+.values-heading{margin-top:47px;margin-bottom:25px}.values-heading h3{font-size:25px;letter-spacing:-.7px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 35px}
+.values-grid article{border-top:1px solid #d9dfd3;padding-top:19px;display:grid;grid-template-columns:27px 1fr;gap:7px 12px;align-content:start}
+.value-number{grid-row:1/3;font-size:11px;color:#7a6a43;padding-top:4px;font-variant-numeric:tabular-nums}
+.values-grid h4{margin:0;font-size:16px;font-weight:600;line-height:1.4;letter-spacing:-.3px}
+.values-grid p{font-size:14px;color:var(--muted);line-height:1.6}
+@media(max-width:850px){.purpose-card{padding:27px}.values-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.identity{padding:42px 0}.identity .section-intro{margin-top:17px;max-width:100%;font-size:14px}.purpose-grid{grid-template-columns:1fr;gap:17px}.purpose-card{padding:25px}.purpose-card h3{font-size:31px}.purpose-card>p{font-size:14px}.purpose-top{margin-bottom:23px}.purpose-foot{font-size:10px;letter-spacing:.3px}.values-heading{margin-top:34px}.values-heading h3{font-size:23px}.values-grid{grid-template-columns:1fr;gap:23px}.values-grid h4{font-size:16px}}
