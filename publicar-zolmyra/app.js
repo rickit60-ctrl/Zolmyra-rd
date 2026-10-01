@@ -46,7 +46,7 @@ $('#project-form').addEventListener('submit', async event => {
   if (button.disabled || !form.reportValidity()) return;
   const status = $('#form-status');
   if (location.protocol === 'file:') {
-    status.textContent = 'El envío estará disponible en la web publicada. Por ahora puedes escribir a zolmyrard@gmail.com.';
+    status.textContent = 'El envío estará disponible en la web publicada. Por ahora puedes escribir a soluciones@zolmyrard.com.';
     return;
   }
   const label = button.innerHTML;
@@ -71,8 +71,8 @@ $('#project-form').addEventListener('submit', async event => {
       ? 'No pudimos confirmar la recepción. Puedes consultar el estado escribiéndonos a '
       : 'No se pudo enviar la consulta. Tus datos siguen aquí para reintentar. También puedes escribir a ';
     const fallback = document.createElement('a');
-    fallback.href = 'mailto:zolmyrard@gmail.com';
-    fallback.textContent = 'zolmyrard@gmail.com';
+    fallback.href = 'mailto:soluciones@zolmyrard.com';
+    fallback.textContent = 'soluciones@zolmyrard.com';
     status.append(fallback);
   } finally {
     clearTimeout(timeout);
